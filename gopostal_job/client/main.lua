@@ -527,8 +527,6 @@ Citizen.CreateThread(function()
 			          				if haveItem then
 			          					TriggerServerEvent('gopostal_job:end', lettre, colis)
 			          					LivraisonStop(district, false)
-			          				else
-			          					ESX.ShowNotification('tu as pas tous la tu te fous de mageule ?')
 			          				end
 
 			          			end, lettre, colis)
@@ -552,14 +550,3 @@ function HelpPromt(text)
        	DisplayHelpTextFromStringLabel(0, 0, 1, -1)
   	end)
 end
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
--- 									CMD COORD
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-RegisterNetEvent("SaveCommand")
-AddEventHandler("SaveCommand", function(message)
-		x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-	    local PlayerName = GetPlayerName()
-	    TriggerServerEvent("SaveCoords", PlayerName , x , y , z, message)			
-end)
