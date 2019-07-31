@@ -14,13 +14,13 @@ Citizen.CreateThread(function()
 end)
 --------------------------------------------------------------------------------
 -- NE RIEN MODIFIER
-local CurrentDelivery 		  = false -- Le joeur en livraison ?
-local Blips 		  		  = {}
-local district 		  		  = {}
-local progress 		  		  = 1
-local colis 		  	  	  = 0
-local lettre 		  		  = 0
-local isInService 			  = true
+local CurrentDelivery 	      = false -- Le joeur en livraison ?
+local Blips 		      = {}
+local district 		      = {}
+local progress 		      = 1
+local colis 		      = 0
+local lettre 		      = 0
+local isInService 	      = false
 local hasAlreadyEnteredMarker = false
 local lastZone                = nil
 local Blips                   = {}
