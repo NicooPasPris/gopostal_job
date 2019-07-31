@@ -521,7 +521,7 @@ Citizen.CreateThread(function()
 		      		Draw3DText(zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z + 1.5 , '📩 ~r~Lettre: ' .. lettre .. '\n📦 ~r~Colis: ' .. colis)
 		      		if GetDistanceBetweenCoords(coords, zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z, true) < 3.0 then
 			        	HelpPromt(_U('pickup'))
-			        	if IsControlJustReleased(1, 38) and ESX.PlayerData.job ~= nil and ESX.PlayerData.job.name == 'gopostal' then
+			        	if IsControlJustReleased(0, 38) and ESX.PlayerData.job ~= nil and ESX.PlayerData.job.name == 'gopostal' then
 			        		if not IsPedInAnyVehicle(PlayerPedId(), false) then
 			          			ESX.TriggerServerCallback('gopostal_job:haveItem', function(haveItem)
 			          				if haveItem then
