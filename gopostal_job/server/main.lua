@@ -86,37 +86,3 @@ AddEventHandler('gopostal_job:Item', function(itemName, amount, label, type)
 		end
 	end
 end)
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
--- 									COORD	
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-AddEventHandler('chatMessage', function(source, name, msg)
-	sm = stringsplit(msg, " ");
-	if sm[1] == "/coord" then
-		CancelEvent()
-		TriggerClientEvent("SaveCommand", source, msg)
-    end
-end)
-
-function stringsplit(inputstr, sep)
-    if sep == nil then
-        sep = "%s"
-    end
-    local t={} ; i=1
-    for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
-        t[i] = str
-        i = i + 1
-    end
-    return t
-end
-
-RegisterServerEvent("SaveCoords")
-AddEventHandler("SaveCoords", function( PlayerName , x , y , z , message )
- file = io.open("Coords.txt", "a")
-    if file then
-        file:write("{x = " .. x .. ", y = " .. y .. ", z = " .. z - 1 .. "},\n")
-    end
-    file:close()
-end)
