@@ -522,7 +522,7 @@ Citizen.CreateThread(function()
 		      		Draw3DText(zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z + 1.5 , '📩 ~r~'.. _U('letter') .. ': ' .. lettre .. '\n📦 ~r~'.. _U('colis') .. ': ' .. colis)
 		      		if GetDistanceBetweenCoords(coords, zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z, true) < 3.0 then
 			        	HelpPromt(_U('pickup'))
-			        	if IsControlJustReleased(0, 38) and ESX.PlayerData.job ~= nil and ESX.PlayerData.job.name == 'gopostal' then
+			        	if IsControlJustReleased(0, 38) and IsJobTrucker() then
 			        		if not IsPedInAnyVehicle(PlayerPedId(), false) then
 			          			ESX.TriggerServerCallback('gopostal_job:haveItem', function(haveItem)
 			          				if haveItem then
@@ -551,14 +551,3 @@ function HelpPromt(text)
        	DisplayHelpTextFromStringLabel(0, 0, 1, -1)
   	end)
 end
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
--- 									CMD COORD
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-RegisterNetEvent("SaveCommand")
-AddEventHandler("SaveCommand", function(message)
-		x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-	    local PlayerName = GetPlayerName()
-	    TriggerServerEvent("SaveCoords", PlayerName , x , y , z, message)			
-end)
