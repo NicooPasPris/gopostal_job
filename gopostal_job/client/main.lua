@@ -100,7 +100,7 @@ function cloakroom()
 		ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
 			local model = nil
 
-			if skin.sex == 0 or 1 then
+			if skin.sex == 0 then
 				model = GetHashKey("mp_m_freemode_01")
 			else
 				model = GetHashKey("mp_f_freemode_01")
