@@ -48,6 +48,9 @@ Locales['br'] = {
 
 	-- Notificação de Entrega
 	['notif_title_delivery']    = '~r~Correios',
-	['notif_district']			= '[Informação de Entrega]\n----------------------\n%s',	
+	['notif_district']			= '[Informação de Entrega]\n----------------------\n%s',
+
+	['bank_deposit_returned']   = 'Um Depósito de ~g~$%s~s~ foi devolvido a você.',
+  	['bank_deposit_taken']      = 'Um Depósito de ~g~$%s~s~ foi tirado de você.',
 
 }
