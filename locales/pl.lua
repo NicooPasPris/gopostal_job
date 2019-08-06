@@ -1,4 +1,4 @@
-Locales['fr'] = {
+Locales['pl'] = {
 
 	['blip_job']				= 'GoPostal',
 
