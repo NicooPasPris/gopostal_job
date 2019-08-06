@@ -531,10 +531,10 @@ Citizen.CreateThread(function()
 
 		      	if GetDistanceBetweenCoords(coords, zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z, true) < 100.0 then
 		      		DrawMarker(zone.Type, zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, zone.Size.x, zone.Size.y, zone.Size.z, zone.Color.r, zone.Color.g, zone.Color.b, 100, false, true, 2, false, false, false, false)
-		      		Draw3DText(zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z + 1.5 , '📩 ~r~'.. _U('letter') .. ': ' .. lettre .. '\n📦 ~r~'.. _U('colis') .. ': ' .. colis)
+		      		Draw3DText(zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z + 1.5 , _U('letter') .. lettre .. '\n' .. _U('colis') .. colis)
 		      		if GetDistanceBetweenCoords(coords, zone.Pos[progress].x, zone.Pos[progress].y, zone.Pos[progress].z, true) < 3.0 then
 			        	HelpPromt(_U('pickup'))
-			        	if IsControlJustReleased(0, 38) and ESX.PlayerData.job ~= nil and ESX.PlayerData.job.name == 'gopostal' then
+			        	if IsControlJustReleased(0, 38) and IsJobTrucker() and isInService then
 			        		if not IsPedInAnyVehicle(PlayerPedId(), false) then
 			          			ESX.TriggerServerCallback('gopostal_job:haveItem', function(haveItem)
 			          				if haveItem then
