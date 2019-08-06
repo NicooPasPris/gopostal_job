@@ -1,10 +1,8 @@
 Config              = {}
 Config.DrawDistance = 100.0
-Config.MaxDelivery	= 10
-Config.TruckPrice	= 300
 Config.Locale       = 'fr'
 
-Config.JobVehiclePlate = 'GOPOSTAL' -- Plaque des vehicules du job (maximun 8 caractères)
+Config.JobVehiclePlate = 'GOPOSTAL' -- Plaque des vehicules du job (maximun 8 caractÃ¨res)
 Config.MaxLetter	   = 4 -- Maximum de lettre par point
 Config.MinLetter	   = 1 -- Maximum de lettre par point
 Config.MaxColis		   = 2 -- Maximum de colis par point
@@ -14,7 +12,7 @@ Config.Caution 		   = 2000
 Config.PricePerLetter  = 7
 Config.PricePerColis   = 15
 
-Config.Vehicle = { -- Ajouter les véhicules du métier ici
+Config.Vehicle = { -- Ajouter les vÃ©hicules du mÃ©tier ici
 	"boxville2"
 }
 
@@ -47,7 +45,7 @@ Config.Zones = { -- Emplacement des points
 		Type  = 1
 	},
 
-	Distribution = { -- point pr récuperer les colis & courrier
+	Distribution = { -- point pr rÃ©cuperer les colis & courrier
 		Pos   = {x = 115.141, y = 100.649, z = 79.890},
 		Size  = {x = 3.0, y = 3.0, z = 1.0},
 		Color = {r = 236, g = 240, b = 241},
